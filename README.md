@@ -1,2 +1,2 @@
 # Avatar
-Reverse Engineered Club Penguin Avatar API
+Reverse Engineered Club Penguin Avatar API Written In Perl
