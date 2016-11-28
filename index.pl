@@ -9,10 +9,11 @@ use CGI::Carp 'fatalsToBrowser';
 
 my $resHTML = CGI->new;
 
-if ($resHTML->param('items')) {
+if ($resHTML->param()) {
     my $strItems = $resHTML->param('items');
+    my $intSize = $resHTML->param('size');
     my $resAvatar = Avatar->new("http://mobcdn.clubpenguin.com/game/items/images/paper/image/");
-    $resAvatar->constructAvatar($strItems);
+    $resAvatar->constructAvatar($strItems, $intSize);
 }
 
 1;
