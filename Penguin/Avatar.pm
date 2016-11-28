@@ -73,9 +73,9 @@ method constructAvatar($strItems, $intSize = 300) {
 						my $resAvatarPhoto = LWP::UserAgent->new->request(new HTTP::Request GET => $avatarPhoto)->content;
 						my $photoImage = GD::Image->new($resAvatarPhoto); 
 						$photoImage->copy($penguinImage, 0, 0, 0, 0, $intSize, $intSize);
-						$penguinImage = $photoImage
+						$penguinImage = $photoImage;
 					}
-			    } 			
+				} 			
 				foreach my $intItem (values @arrItems) {    
 					if (looks_like_number($intItem) && $intItem != $intColor && exists($self->{items}->{$intItem}) && $self->{items}->{$intItem}->{type} ne 'PHOTO') {
 						my $avatarItems = $self->{api} . $intSize . '/' . $intItem . $self->{ext};
