@@ -58,7 +58,7 @@ method isValidSize($intSize) {
 		}
 }
 
-method constructAvatar($strItems, $intSize = 300) {
+method constructAvatar($strItems, $intSize) {
 	GD::Image->trueColor(1);
 	if ($self->isValidSize($intSize)) {
 			my @arrItems = split('-', $strItems);
