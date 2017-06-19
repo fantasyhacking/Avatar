@@ -13,7 +13,7 @@ my $intDefaultSize = 300;
 if ($resHTML->param('items')) {
     my $strItems = $resHTML->param('items');
     my $intSize = $resHTML->param('size');
-    my $resAvatar = Avatar->new("http://mobcdn.clubpenguin.com/game/items/images/paper/image/");
+    my $resAvatar = Avatar->new("https://icer.ink/mobcdn.clubpenguin.com/game/items/images/paper/image/");
     $resAvatar->constructAvatar($strItems, ($intSize ? $intSize : $intDefaultSize));
 }
 
