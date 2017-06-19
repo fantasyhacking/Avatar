@@ -19,7 +19,7 @@ print "Content-type: image/png\n\n";
 
 method new($resAPI) {
 	   my $obj = bless {}, $self;
-	   my $paper_json = 'http://cdn.clubpenguin.com/play/en/web_service/game_configs/paper_items.json';
+	   my $paper_json = 'https://icer.ink/media1.clubpenguin.com/play/en/web_service/game_configs/paper_items.json';
 	   $obj->{api} = $resAPI;
 	   $obj->{ext} = '.png';
 	   $obj->loadItems($paper_json);
